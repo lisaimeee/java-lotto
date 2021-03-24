@@ -40,7 +40,7 @@ public class StringAdditionExpression implements Expression {
     }
 
     private static boolean isNullOrEmpty(String input) {
-        return (input == null || EMPTY.equals(input));
+        return Objects.isNull(input) || EMPTY.equals(input);
     }
 
     private static boolean isDefault(Matcher matcher) {
