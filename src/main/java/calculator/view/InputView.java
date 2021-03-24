@@ -7,7 +7,11 @@ import java.util.Scanner;
 public class InputView {
     private static final String SUFFIX_PATTERN = "\\\\n";
 
-    public String getInput() {
+    private InputView() {
+
+    }
+
+    public static String getInput() {
         Scanner scanner = new Scanner(System.in);
         if (scanner.hasNext()) {
             String formatted = scanner.nextLine()

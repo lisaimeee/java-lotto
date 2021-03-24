@@ -1,7 +1,12 @@
 package calculator.view;
 
 public class PrintView {
-    public void print(int result){
+    
+    private PrintView() {
+
+    }
+
+    public static void print(int result) {
         System.out.println(result);
     }
 }
