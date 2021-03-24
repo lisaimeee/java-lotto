@@ -3,17 +3,16 @@ package calculator.domain;
 import java.util.Arrays;
 
 public class Calculator {
-    private static Calculator calculator;
-
     private Calculator() {
 
     }
 
+    private static class LazyHolder {
+        public static final Calculator INSTANCE = new Calculator();
+    }
+
     public static Calculator getInstance() {
-        if (calculator == null) {
-            calculator = new Calculator();
-        }
-        return calculator;
+        return LazyHolder.INSTANCE;
     }
 
     public int calculate(Expression expression) {
